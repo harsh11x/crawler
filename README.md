@@ -72,7 +72,7 @@ This project is a web crawler designed to automatically scrape data from website
 •	AutoThrottle: The auto-throttle feature is enabled to slow down crawling if the server’s load is detected to be high.
 •	Proxy Rotation: The crawler uses rotating proxies to hide the IP address and prevent IP blocking.
 
-### Ethical and Legal Considerations
+### Ethical and Legal Considerations: 
 
 #### This crawler respects ethical web scraping practices:
 
@@ -80,7 +80,7 @@ This project is a web crawler designed to automatically scrape data from website
 •	Avoid scraping sensitive data: Do not scrape private or copyrighted content.
 •	Use rate-limiting: Avoid sending too many requests in a short period to prevent overloading the server.
 
-#### Customization
+### Customization:
 
 •	Starting URLs: To change the initial seed URLs, edit the start_urls list in the all_sites.py spider file.
 •	Data to Extract: Modify the parse_item function in all_sites.py to extract different types of content (e.g., images, links, etc.).
