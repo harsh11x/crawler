@@ -1,3 +1,6 @@
+
+<img width="926" alt="Screenshot 2024-10-12 at 11 21 40 PM" src="https://github.com/user-attachments/assets/e14cf35d-e527-425e-becd-9c6695215f41">
+
 # Stealth Web Crawler
 
 This project is a web crawler designed to automatically scrape data from websites while leaving minimal traces. It uses the Scrapy framework to handle crawling, link extraction, and anonymous crawling techniques like random user agents, proxy rotation, and rate limiting.
