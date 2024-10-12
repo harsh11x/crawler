@@ -36,14 +36,14 @@ This project is a web crawler designed to automatically scrape data from website
 
         git clone https://github.com/your-username/stealth_crawler.git
 
-  	    cd stealth_crawler
+        cd stealth_crawler
 
 
 2. Create a virtual environment:
 
-         python -m venv venv
+       python -m venv venv
 
-         source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+       source venv/bin/activate   # On Windows use `venv\Scripts\activate`
 
 3. Install dependencies:
 
@@ -54,16 +54,45 @@ This project is a web crawler designed to automatically scrape data from website
        pip install scrapy scrapy-user-agents scrapy-rotating-proxies
 
 
-## Usage:
+## Usage: Two ways: 1. Automatic 2. Manual (choose any one)
 
-1.	To start the crawler, navigate to the root directory of the project and run:
+### 1.	To start the crawler, navigate to the root directory of the project and run:
 
-         scrapy crawl all_sites
+    python3 crawler.py
+    
+This command will display the title “CRAWLER” in a decorative star format, along with your name. You will then be presented with two options.
 
-2. To save the scraped data into a JSON file:
+#### The program automates the crawling process through the following options:
+	
+ •	Option 1: Run Simply
+Selecting this option will execute the command to run the Scrapy crawler without saving the output. It will perform the crawling process and display the results in the terminal.
 
-       scrapy crawl all_sites -o output.json
-  
+    scrapy crawl all_sites
+
+•	Option 2: Run while saving the output
+If you choose this option, the crawler will execute and save the scraped data into a JSON file named output.json. This allows you to retain the collected data for later analysis or use.
+
+    scrapy crawl all_sites -o output.json
+
+The crawler.py script automates the navigation to the stealth_crawler/spiders/ directory and the execution of the Scrapy commands based on your selection. This simplifies the process, so you don’t have to handle command-line operations manually.
+
+
+### 2.	Manual Execution (Optional)
+If you prefer to run the crawler manually instead of using the automated script, you can follow these steps:
+• Navigate to the stealth_crawler/spiders/ directory:
+              
+    cd stealth_crawler/spiders/
+
+• Run the Scrapy crawler without saving the output:
+   
+    scrapy crawl all_sites
+
+• To save the scraped data into a JSON file, use:
+
+    scrapy crawl all_sites -o output.json
+
+
+
 
 ## Crawler Settings
 
