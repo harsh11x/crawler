@@ -91,3 +91,39 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+# Randomize the user-agent for each request
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
+}
+
+
+# Add a delay between requests (e.g., 1-3 seconds)
+DOWNLOAD_DELAY = 2
+RANDOMIZE_DOWNLOAD_DELAY = True
+
+# Enable AutoThrottle to automatically slow down based on site load
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = 1
+AUTOTHROTTLE_MAX_DELAY = 5
+
+
+# In settings.py
+PROXY_POOL_ENABLED = True
+DOWNLOADER_MIDDLEWARES.update({
+    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 1,
+    'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+    'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+})
+
+# Disable cookies to reduce tracking
+COOKIES_ENABLED = False
+
+
+# In settings.py
+HTTP_PROXY = 'http://127.0.0.1:8118'  # Tor default HTTP proxy
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
+    'my_project.middlewares.ProxyMiddleware': 100,
+}
