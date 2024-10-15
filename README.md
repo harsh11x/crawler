@@ -37,7 +37,7 @@ This project is a web crawler designed to automatically scrape data from website
 
 1.	Clone the repository:
 
-        git clone https://github.com/your-username/stealth_crawler.git
+        git clone https://github.com/harsh11x/stealth_crawler.git
 
         cd stealth_crawler
 
